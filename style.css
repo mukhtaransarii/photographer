@@ -10,20 +10,16 @@
   color: var(--black);
 }
 @font-face {
-  font-family: QUIKSILVER;
-  src: url(/fonts/quickSilver.ttf);
-}
-@font-face {
   font-family: BODYFONT;
-  src: url(/fonts/bodyFont.woff);
+  src: url(./fonts/bodyFont.woff);
 }
 @font-face {
   font-family: TALLER;
-  src: url(/fonts/tallbolder.ttf);
+  src: url(./fonts/tallbolder.woff);
 }
 @font-face {
   font-family: NFI;
-  src: url(/fonts/terminator-real-nfi.ttf);
+  src: url(./fonts/terminator-real-nfi.woff);
 }
 :root{
   --Twhite: #ffffff3c;
@@ -325,10 +321,19 @@ slider .slider2 a:hover{
 }
 
 #page4{
-  height: 100vh;
-  width: 100%;
-  background-color: var(--white);
+  width: 100vw;
   padding: 30px 20px;
+}
+#page4 .proWrap{
+  height: calc(100vh - 150px);
+  padding: 20px 0px;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
 }
 #page4 .o{
   transform: rotate(5deg);
@@ -338,35 +343,38 @@ slider .slider2 a:hover{
 }
 .p1{
   background: linear-gradient(135deg, #0afafa, #90fa50);
+  top: 20px;
 }
 .p2{
   background: linear-gradient(135deg, #0a19fa, #9fa750);
+  top: 30px;
 }
 .p3{
   background: linear-gradient(135deg, #fdaafa, #1aaf30);
+  top: 40px;
 }
 .p4{
   background: linear-gradient(135deg, #aaafff, #dddaaa);
+  top: 50px;
 }
 .p5{
   background: linear-gradient(135deg, #dfdf80, #aafaff);
+  top: 60px;
 }
 .p6{
   background: linear-gradient(135deg, #ee4faa, #90fa50);
+  top: 70px;
 }
 .p7{
   background: linear-gradient(135deg, #bbb000, #eadfea);
+  top: 80px;
 }
 .product{
   width: 30%;
   aspect-ratio: 3/4;
   border-radius: 10px;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -680px;
   padding: 20px;
-  position: relative;
+  position: absolute;
 }
 .product h4{
   font-size: bold;
@@ -379,7 +387,7 @@ slider .slider2 a:hover{
   object-fit: contain;
   width: 100%;
   margin: 10px auto;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .product span{
   position: absolute;
@@ -503,7 +511,6 @@ footer2 h4{
   }
   .product{
     width: 80%;
-    margin-bottom: -440px;
   }
   .product h4{
     font-size: 5vw;
